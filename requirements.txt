@@ -1,0 +1,30 @@
+# Core application
+streamlit>=1.40,<2
+pandas>=2.0
+numpy>=1.26
+scikit-learn>=1.4
+joblib>=1.3
+plotly>=5.20
+matplotlib>=3.8
+seaborn>=0.13
+PyYAML>=6.0
+python-dotenv>=1.0
+requests>=2.31
+
+# Reporting / export
+reportlab>=4.0
+openpyxl>=3.1
+arabic-reshaper>=3.0
+python-bidi>=0.6
+
+# Forecasting and explainability
+statsmodels>=0.14
+shap>=0.44
+xgboost>=2.0
+
+# Tests and notebook
+pytest>=8.0,<9
+nbformat>=5.9
+nbclient>=0.9
+nbconvert>=7.10
+ipykernel>=6.29

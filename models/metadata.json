@@ -1,0 +1,589 @@
+{
+  "trained_at": "2026-11-13T22:19:26",
+  "version": "1.0.0",
+  "random_state": 42,
+  "dataset": {
+    "path": "data/synthetic_businesses.csv",
+    "rows": 6000,
+    "synthetic": true,
+    "success_rate": 0.5896666666666667,
+    "columns": [
+      "idea_id",
+      "sector",
+      "target_market",
+      "revenue_model",
+      "funding_stage",
+      "country_preset",
+      "country",
+      "city",
+      "city_tier",
+      "budget",
+      "team_size",
+      "price",
+      "competitor_intensity",
+      "differentiation",
+      "market_size_score",
+      "market_growth_score",
+      "audience_fit",
+      "operational_complexity",
+      "regulatory_risk",
+      "timing_score",
+      "marketing_spend",
+      "expected_customers",
+      "founder_experience_years",
+      "team_readiness",
+      "success",
+      "roi_percent",
+      "breakeven_months"
+    ]
+  },
+  "features": {
+    "all": [
+      "sector",
+      "target_market",
+      "revenue_model",
+      "funding_stage",
+      "country_preset",
+      "city_tier",
+      "budget",
+      "team_size",
+      "price",
+      "competitor_intensity",
+      "differentiation",
+      "market_size_score",
+      "market_growth_score",
+      "audience_fit",
+      "operational_complexity",
+      "regulatory_risk",
+      "timing_score",
+      "marketing_spend",
+      "expected_customers",
+      "founder_experience_years",
+      "team_readiness"
+    ],
+    "categorical": [
+      "sector",
+      "target_market",
+      "revenue_model",
+      "funding_stage",
+      "country_preset"
+    ],
+    "numeric": [
+      "city_tier",
+      "budget",
+      "team_size",
+      "price",
+      "competitor_intensity",
+      "differentiation",
+      "market_size_score",
+      "market_growth_score",
+      "audience_fit",
+      "operational_complexity",
+      "regulatory_risk",
+      "timing_score",
+      "marketing_spend",
+      "expected_customers",
+      "founder_experience_years",
+      "team_readiness"
+    ]
+  },
+  "classification": {
+    "target": "success",
+    "best_model": "Tuned Logistic Regression (baseline)",
+    "cross_validation": [
+      {
+        "model": "Tuned Logistic Regression (baseline)",
+        "kind": "classification",
+        "fit_seconds": 2.2,
+        "accuracy_mean": 0.7133333333333334,
+        "accuracy_std": 0.015046225071056496,
+        "precision_mean": 0.7854509679134941,
+        "precision_std": 0.011241609373636847,
+        "recall_mean": 0.7067097135599211,
+        "recall_std": 0.01992142836206349,
+        "f1_mean": 0.7439344800889076,
+        "f1_std": 0.01534859740118314,
+        "roc_auc_mean": 0.7913999685336868,
+        "roc_auc_std": 0.007815928717746208
+      },
+      {
+        "model": "Logistic Regression (baseline)",
+        "kind": "classification",
+        "fit_seconds": 0.49,
+        "accuracy_mean": 0.7152083333333333,
+        "accuracy_std": 0.016632778046843405,
+        "precision_mean": 0.7868369128482225,
+        "precision_std": 0.01219176743802148,
+        "recall_mean": 0.7088283576277178,
+        "recall_std": 0.021321689658550327,
+        "f1_mean": 0.7457358571066681,
+        "f1_std": 0.016832376518457537,
+        "roc_auc_mean": 0.7902325368307436,
+        "roc_auc_std": 0.007217471175489248
+      },
+      {
+        "model": "XGBoost",
+        "kind": "classification",
+        "fit_seconds": 3.03,
+        "accuracy_mean": 0.7131249999999999,
+        "accuracy_std": 0.00530330085889915,
+        "precision_mean": 0.7382999690218309,
+        "precision_std": 0.002768766227049313,
+        "recall_mean": 0.7954055604483826,
+        "recall_std": 0.014806245867099737,
+        "f1_mean": 0.7657123771982864,
+        "f1_std": 0.006568534276349622,
+        "roc_auc_mean": 0.7763454192107567,
+        "roc_auc_std": 0.005038470437255379
+      },
+      {
+        "model": "Random Forest",
+        "kind": "classification",
+        "fit_seconds": 4.46,
+        "accuracy_mean": 0.7127083333333334,
+        "accuracy_std": 0.0036916760722227548,
+        "precision_mean": 0.7226737273754055,
+        "precision_std": 0.0028749027808576827,
+        "recall_mean": 0.8321545614129686,
+        "recall_std": 0.016122677000869404,
+        "f1_mean": 0.7734584193934921,
+        "f1_std": 0.005616710452756797,
+        "roc_auc_mean": 0.7763170590316423,
+        "roc_auc_std": 0.0055047651211431415
+      },
+      {
+        "model": "Gradient Boosting",
+        "kind": "classification",
+        "fit_seconds": 17.21,
+        "accuracy_mean": 0.7145833333333332,
+        "accuracy_std": 0.009204467514322702,
+        "precision_mean": 0.7371005518088968,
+        "precision_std": 0.006784511911316521,
+        "recall_mean": 0.8021157233495696,
+        "recall_std": 0.02139381346642421,
+        "f1_mean": 0.7680671039592412,
+        "f1_std": 0.010061518758263378,
+        "roc_auc_mean": 0.7751523653239305,
+        "roc_auc_std": 0.005507780616634968
+      }
+    ],
+    "test_metrics": {
+      "accuracy": 0.7208333333333333,
+      "precision": 0.7891472868217054,
+      "recall": 0.7189265536723164,
+      "f1": 0.7524020694752402,
+      "roc_auc": 0.7900217031831335,
+      "confusion_matrix": [
+        [
+          356,
+          136
+        ],
+        [
+          199,
+          509
+        ]
+      ],
+      "classification_report": {
+        "0": {
+          "precision": 0.6414414414414414,
+          "recall": 0.7235772357723578,
+          "f1-score": 0.6800382043935053,
+          "support": 492.0
+        },
+        "1": {
+          "precision": 0.7891472868217054,
+          "recall": 0.7189265536723164,
+          "f1-score": 0.7524020694752402,
+          "support": 708.0
+        },
+        "accuracy": 0.7208333333333333,
+        "macro avg": {
+          "precision": 0.7152943641315734,
+          "recall": 0.7212518947223371,
+          "f1-score": 0.7162201369343728,
+          "support": 1200.0
+        },
+        "weighted avg": {
+          "precision": 0.7285878902157972,
+          "recall": 0.7208333333333333,
+          "f1-score": 0.7227328847917289,
+          "support": 1200.0
+        }
+      }
+    },
+    "tuning": {
+      "best_params": {
+        "classifier__C": 0.03
+      },
+      "best_cv_score": 0.7913999685336868,
+      "scoring": "roc_auc",
+      "seconds": 2.2,
+      "candidates": 6
+    },
+    "permutation_importance": [
+      {
+        "feature": "differentiation",
+        "importance_mean": 0.06698934362224966,
+        "importance_std": 0.008742982406687243
+      },
+      {
+        "feature": "competitor_intensity",
+        "importance_mean": 0.03126866014422851,
+        "importance_std": 0.004616624999233238
+      },
+      {
+        "feature": "audience_fit",
+        "importance_mean": 0.02482832667309718,
+        "importance_std": 0.003511718694296244
+      },
+      {
+        "feature": "market_size_score",
+        "importance_mean": 0.022171696293234056,
+        "importance_std": 0.002286493653672116
+      },
+      {
+        "feature": "market_growth_score",
+        "importance_mean": 0.021510265950117048,
+        "importance_std": 0.003753466147381823
+      },
+      {
+        "feature": "team_readiness",
+        "importance_mean": 0.012791672408249476,
+        "importance_std": 0.0026056795846505147
+      },
+      {
+        "feature": "revenue_model",
+        "importance_mean": 0.011990721602131216,
+        "importance_std": 0.0037809076764450168
+      },
+      {
+        "feature": "regulatory_risk",
+        "importance_mean": 0.009686050250332933,
+        "importance_std": 0.0023091001591199955
+      },
+      {
+        "feature": "timing_score",
+        "importance_mean": 0.009300215883514752,
+        "importance_std": 0.0012947983480393682
+      },
+      {
+        "feature": "operational_complexity",
+        "importance_mean": 0.008968926553672296,
+        "importance_std": 0.002530095694855974
+      },
+      {
+        "feature": "marketing_spend",
+        "importance_mean": 0.006392104175279023,
+        "importance_std": 0.0018723173989941993
+      },
+      {
+        "feature": "founder_experience_years",
+        "importance_mean": 0.00199060677047449,
+        "importance_std": 0.001277698412741691
+      },
+      {
+        "feature": "country_preset",
+        "importance_mean": 0.0011213311285654727,
+        "importance_std": 0.0005132686044579624
+      },
+      {
+        "feature": "target_market",
+        "importance_mean": 0.0010575995590463628,
+        "importance_std": 0.000834004386069673
+      },
+      {
+        "feature": "expected_customers",
+        "importance_mean": 0.0008486059436864756,
+        "importance_std": 0.0002459288230686148
+      },
+      {
+        "feature": "team_size",
+        "importance_mean": 0.0006711910339441518,
+        "importance_std": 0.0006113192429481441
+      },
+      {
+        "feature": "budget",
+        "importance_mean": 0.00023483073813777012,
+        "importance_std": 6.924263208708715e-05
+      },
+      {
+        "feature": "city_tier",
+        "importance_mean": 6.545404437088286e-05,
+        "importance_std": 0.0002678274541513593
+      },
+      {
+        "feature": "price",
+        "importance_mean": 3.2152863901457884e-05,
+        "importance_std": 7.61360730065187e-05
+      },
+      {
+        "feature": "sector",
+        "importance_mean": -0.0001337788801617501,
+        "importance_std": 0.001104135789218865
+      },
+      {
+        "feature": "funding_stage",
+        "importance_mean": -0.0008250654540444158,
+        "importance_std": 0.0003778362874358353
+      }
+    ],
+    "shap_available": true
+  },
+  "regression": {
+    "roi_percent": {
+      "best_model": "Tuned XGBoost Regressor",
+      "metrics": {
+        "mae": 54.61651782048941,
+        "rmse": 85.45569446460992,
+        "r2": 0.8110112450056797,
+        "mape": 113.42283148824195
+      },
+      "tuning": {
+        "best_params": {
+          "regressor__subsample": 0.75,
+          "regressor__n_estimators": 400,
+          "regressor__max_depth": 5,
+          "regressor__learning_rate": 0.03,
+          "regressor__colsample_bytree": 0.9
+        },
+        "best_cv_score": -62.155327484249945,
+        "scoring": "neg_mean_absolute_error",
+        "seconds": 26.77,
+        "candidates": 9
+      },
+      "comparison": [
+        {
+          "model": "Ridge Regression (baseline)",
+          "kind": "regression",
+          "fit_seconds": 0.25,
+          "mae_mean": 106.7586925665753,
+          "mae_std": 0.7005781258484927,
+          "rmse_mean": 147.81219623132037,
+          "rmse_std": 2.844613519629137,
+          "r2_mean": 0.48407308817941447,
+          "r2_std": 0.0201588159147093,
+          "target": "roi_percent"
+        },
+        {
+          "model": "Random Forest Regressor",
+          "kind": "regression",
+          "fit_seconds": 7.33,
+          "mae_mean": 77.11641678574652,
+          "mae_std": 1.7217708523061463,
+          "rmse_mean": 120.374579374576,
+          "rmse_std": 2.993188455595968,
+          "r2_mean": 0.6578060577289886,
+          "r2_std": 0.016066809892095437,
+          "target": "roi_percent"
+        },
+        {
+          "model": "Gradient Boosting Regressor",
+          "kind": "regression",
+          "fit_seconds": 15.33,
+          "mae_mean": 76.40727909147017,
+          "mae_std": 1.150992945338663,
+          "rmse_mean": 113.2421715798539,
+          "rmse_std": 2.2444007628626257,
+          "r2_mean": 0.6973150160935507,
+          "r2_std": 0.007995171449899176,
+          "target": "roi_percent"
+        },
+        {
+          "model": "XGBoost Regressor",
+          "kind": "regression",
+          "fit_seconds": 2.3,
+          "mae_mean": 68.02754484466539,
+          "mae_std": 0.606309892478984,
+          "rmse_mean": 102.52193922036004,
+          "rmse_std": 1.5562888722053512,
+          "r2_mean": 0.7515418666562826,
+          "r2_std": 0.01414604016159677,
+          "target": "roi_percent"
+        },
+        {
+          "model": "Tuned XGBoost Regressor",
+          "kind": "regression",
+          "fit_seconds": 26.77,
+          "mae_mean": 62.155327484249945,
+          "mae_std": 1.2388414280169255,
+          "rmse_mean": 96.35466284815101,
+          "rmse_std": 2.215028220566759,
+          "r2_mean": 0.7807159119383041,
+          "r2_std": 0.010465590688027002,
+          "target": "roi_percent"
+        }
+      ]
+    },
+    "breakeven_months": {
+      "best_model": "Tuned XGBoost Regressor",
+      "metrics": {
+        "mae": 7.418414316574732,
+        "rmse": 10.301355859819495,
+        "r2": 0.7489604542238973,
+        "mape": 47.526582885238746
+      },
+      "tuning": {
+        "best_params": {
+          "regressor__subsample": 0.75,
+          "regressor__n_estimators": 400,
+          "regressor__max_depth": 5,
+          "regressor__learning_rate": 0.03,
+          "regressor__colsample_bytree": 0.9
+        },
+        "best_cv_score": -7.8439368415307555,
+        "scoring": "neg_mean_absolute_error",
+        "seconds": 26.13,
+        "candidates": 9
+      },
+      "comparison": [
+        {
+          "model": "Ridge Regression (baseline)",
+          "kind": "regression",
+          "fit_seconds": 0.23,
+          "mae_mean": 11.067964513047528,
+          "mae_std": 0.08684459152390474,
+          "rmse_mean": 13.823023518615061,
+          "rmse_std": 0.16387853457832646,
+          "r2_mean": 0.5563248258107284,
+          "r2_std": 0.018956513766771394,
+          "target": "breakeven_months"
+        },
+        {
+          "model": "Random Forest Regressor",
+          "kind": "regression",
+          "fit_seconds": 7.19,
+          "mae_mean": 9.067055370705196,
+          "mae_std": 0.05694232996965695,
+          "rmse_mean": 12.24714897857949,
+          "rmse_std": 0.08855055944266406,
+          "r2_mean": 0.6517972764001138,
+          "r2_std": 0.012188497607100956,
+          "target": "breakeven_months"
+        },
+        {
+          "model": "Gradient Boosting Regressor",
+          "kind": "regression",
+          "fit_seconds": 15.73,
+          "mae_mean": 8.781605444145347,
+          "mae_std": 0.0773531092924876,
+          "rmse_mean": 11.661849840781416,
+          "rmse_std": 0.1252117188938411,
+          "r2_mean": 0.6842355171295712,
+          "r2_std": 0.012779627138003131,
+          "target": "breakeven_months"
+        },
+        {
+          "model": "XGBoost Regressor",
+          "kind": "regression",
+          "fit_seconds": 2.17,
+          "mae_mean": 8.203943603383953,
+          "mae_std": 0.05303082955773004,
+          "rmse_mean": 11.031368235557457,
+          "rmse_std": 0.06982191611212989,
+          "r2_mean": 0.7175139342401343,
+          "r2_std": 0.009326156280249647,
+          "target": "breakeven_months"
+        },
+        {
+          "model": "Tuned XGBoost Regressor",
+          "kind": "regression",
+          "fit_seconds": 26.13,
+          "mae_mean": 7.8439368415307555,
+          "mae_std": 0.06698791309303843,
+          "rmse_mean": 10.652784724723235,
+          "rmse_std": 0.05177012805630642,
+          "r2_mean": 0.7365967104328476,
+          "r2_std": 0.007709417232715658,
+          "target": "breakeven_months"
+        }
+      ]
+    }
+  },
+  "clustering": {
+    "n_clusters": 5,
+    "features": [
+      "market_size_score",
+      "market_growth_score",
+      "audience_fit",
+      "competitor_intensity",
+      "differentiation",
+      "budget",
+      "team_readiness"
+    ],
+    "profiles": [
+      {
+        "cluster": 0,
+        "market_size_score": 8.07,
+        "market_growth_score": 5.979,
+        "audience_fit": 6.437,
+        "competitor_intensity": 7.128,
+        "differentiation": 6.063,
+        "budget": 153100.9,
+        "team_readiness": 6.127,
+        "success": 0.641,
+        "roi_percent": -31.355,
+        "segment_name": "Strong differentiated niche"
+      },
+      {
+        "cluster": 1,
+        "market_size_score": 8.72,
+        "market_growth_score": 7.907,
+        "audience_fit": 6.451,
+        "competitor_intensity": 6.565,
+        "differentiation": 6.164,
+        "budget": 44133.071,
+        "team_readiness": 5.232,
+        "success": 0.818,
+        "roi_percent": 88.308,
+        "segment_name": "High-potential growth play"
+      },
+      {
+        "cluster": 2,
+        "market_size_score": 7.675,
+        "market_growth_score": 5.212,
+        "audience_fit": 7.201,
+        "competitor_intensity": 7.867,
+        "differentiation": 7.378,
+        "budget": 39189.678,
+        "team_readiness": 4.859,
+        "success": 0.619,
+        "roi_percent": 74.367,
+        "segment_name": "Balanced opportunity"
+      },
+      {
+        "cluster": 3,
+        "market_size_score": 8.175,
+        "market_growth_score": 5.936,
+        "audience_fit": 5.964,
+        "competitor_intensity": 8.465,
+        "differentiation": 4.472,
+        "budget": 46163.47,
+        "team_readiness": 5.699,
+        "success": 0.447,
+        "roi_percent": 28.791,
+        "segment_name": "Competitive execution play"
+      },
+      {
+        "cluster": 4,
+        "market_size_score": 6.776,
+        "market_growth_score": 5.073,
+        "audience_fit": 6.152,
+        "competitor_intensity": 6.199,
+        "differentiation": 5.064,
+        "budget": 41308.436,
+        "team_readiness": 4.861,
+        "success": 0.461,
+        "roi_percent": 36.731,
+        "segment_name": "High-risk early concept"
+      }
+    ],
+    "descriptions": {
+      "1": "High-potential growth play",
+      "0": "Strong differentiated niche",
+      "2": "Balanced opportunity",
+      "3": "Competitive execution play",
+      "4": "High-risk early concept"
+    }
+  },
+  "test_size": 0.2
+}

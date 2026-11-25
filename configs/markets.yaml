@@ -1,0 +1,446 @@
+# Market presets and sector assumptions.
+# Edit this file to add a country, a currency, costs or a new sector. No Python change is required.
+# All monetary values are expressed in the preset currency.
+
+presets:
+  tunisia:
+    label:
+      en: "Tunisia"
+      fr: "Tunisie"
+      ar: "تونس"
+    currency: "TND"
+    currency_symbol: "TND"
+    locale: "fr_TN"
+    avg_monthly_salary: 1200
+    rent_monthly: 800
+    base_fixed_monthly: 750
+    market_factor: 0.88
+    city_factor:
+      "1": 1.18
+      "2": 1.00
+      "3": 0.84
+    typical_budget: 30000
+    typical_price: 45
+    typical_customers: 180
+    typical_team_size: 3
+    typical_marketing: 600
+    typical_timeline_months: 9
+    cities:
+      en: ["Tunis", "Sfax", "Sousse", "Nabeul", "Bizerte", "Monastir", "Gabès"]
+      fr: ["Tunis", "Sfax", "Sousse", "Nabeul", "Bizerte", "Monastir", "Gabès"]
+      ar: ["تونس", "صفاقس", "سوسة", "نابل", "بنزرت", "المنستير", "قابس"]
+    sector_weights:
+      food_beverage: 13
+      retail: 12
+      ecommerce: 10
+      saas: 7
+      fintech: 4
+      education: 8
+      healthcare: 6
+      logistics: 5
+      tourism: 8
+      renewable_energy: 4
+      creative_services: 7
+      manufacturing: 4
+      agriculture: 5
+      real_estate: 3
+      fitness_wellness: 4
+      other: 4
+
+  generic:
+    label:
+      en: "Generic / international"
+      fr: "Générique / international"
+      ar: "عام / دولي"
+    currency: "USD"
+    currency_symbol: "USD"
+    locale: "en_US"
+    avg_monthly_salary: 2800
+    rent_monthly: 1800
+    base_fixed_monthly: 1200
+    market_factor: 1.00
+    city_factor:
+      "1": 1.25
+      "2": 1.00
+      "3": 0.82
+    typical_budget: 50000
+    typical_price: 80
+    typical_customers: 220
+    typical_team_size: 4
+    typical_marketing: 1500
+    typical_timeline_months: 10
+    cities:
+      en: ["Capital city", "Large city", "Regional city"]
+      fr: ["Capitale", "Grande ville", "Ville régionale"]
+      ar: ["العاصمة", "مدينة كبيرة", "مدينة جهوية"]
+    sector_weights:
+      food_beverage: 8
+      retail: 9
+      ecommerce: 12
+      saas: 13
+      fintech: 8
+      education: 8
+      healthcare: 6
+      logistics: 5
+      tourism: 5
+      renewable_energy: 6
+      creative_services: 6
+      manufacturing: 4
+      agriculture: 3
+      real_estate: 3
+      fitness_wellness: 4
+      other: 5
+
+sectors:
+  food_beverage:
+    label:
+      en: "Food & beverage"
+      fr: "Restauration & alimentation"
+      ar: "المطاعم والأغذية"
+    market_size: 7.8
+    growth: 5.2
+    competition: 8.2
+    capital_intensity: 7.2
+    gross_margin: 0.61
+    scalability: 4.4
+    regulatory: 6.6
+    operational: 7.6
+    typical_price: 12
+    typical_customers: 1300
+    benchmark:
+      net_margin: 0.08
+      monthly_growth: 0.022
+      churn: 0.055
+      cac: 32
+      ltv_cac: 3.0
+      marketing_ratio: 0.07
+  retail:
+    label:
+      en: "Retail & commerce"
+      fr: "Commerce de détail"
+      ar: "التجارة بالتقسيط"
+    market_size: 7.6
+    growth: 4.2
+    competition: 8.0
+    capital_intensity: 6.6
+    gross_margin: 0.38
+    scalability: 5.2
+    regulatory: 4.6
+    operational: 6.2
+    typical_price: 55
+    typical_customers: 380
+    benchmark:
+      net_margin: 0.06
+      monthly_growth: 0.018
+      churn: 0.045
+      cac: 45
+      ltv_cac: 3.0
+      marketing_ratio: 0.06
+  ecommerce:
+    label:
+      en: "E-commerce"
+      fr: "E-commerce"
+      ar: "التجارة الإلكترونية"
+    market_size: 8.1
+    growth: 7.4
+    competition: 8.4
+    capital_intensity: 5.6
+    gross_margin: 0.43
+    scalability: 8.2
+    regulatory: 4.8
+    operational: 5.6
+    typical_price: 70
+    typical_customers: 450
+    benchmark:
+      net_margin: 0.10
+      monthly_growth: 0.04
+      churn: 0.06
+      cac: 38
+      ltv_cac: 3.2
+      marketing_ratio: 0.13
+  saas:
+    label:
+      en: "SaaS / software"
+      fr: "SaaS / logiciel"
+      ar: "البرمجيات كخدمة"
+    market_size: 8.5
+    growth: 8.2
+    competition: 7.2
+    capital_intensity: 4.2
+    gross_margin: 0.78
+    scalability: 9.5
+    regulatory: 4.4
+    operational: 5.1
+    typical_price: 150
+    typical_customers: 90
+    benchmark:
+      net_margin: 0.18
+      monthly_growth: 0.055
+      churn: 0.035
+      cac: 180
+      ltv_cac: 3.5
+      marketing_ratio: 0.16
+  fintech:
+    label:
+      en: "Fintech & financial services"
+      fr: "Fintech & services financiers"
+      ar: "التكنولوجيا المالية"
+    market_size: 8.8
+    growth: 7.8
+    competition: 7.0
+    capital_intensity: 7.8
+    gross_margin: 0.72
+    scalability: 9.2
+    regulatory: 8.8
+    operational: 6.8
+    typical_price: 120
+    typical_customers: 110
+    benchmark:
+      net_margin: 0.16
+      monthly_growth: 0.045
+      churn: 0.03
+      cac: 220
+      ltv_cac: 3.8
+      marketing_ratio: 0.15
+  education:
+    label:
+      en: "Education & training"
+      fr: "Éducation & formation"
+      ar: "التعليم والتدريب"
+    market_size: 7.7
+    growth: 6.1
+    competition: 6.9
+    capital_intensity: 4.5
+    gross_margin: 0.66
+    scalability: 7.0
+    regulatory: 5.8
+    operational: 5.3
+    typical_price: 95
+    typical_customers: 160
+    benchmark:
+      net_margin: 0.14
+      monthly_growth: 0.03
+      churn: 0.05
+      cac: 85
+      ltv_cac: 3.0
+      marketing_ratio: 0.12
+  healthcare:
+    label:
+      en: "Healthcare & wellness services"
+      fr: "Santé & bien-être"
+      ar: "الصحة والرفاهية"
+    market_size: 8.0
+    growth: 6.0
+    competition: 6.6
+    capital_intensity: 7.0
+    gross_margin: 0.63
+    scalability: 6.2
+    regulatory: 8.2
+    operational: 7.1
+    typical_price: 85
+    typical_customers: 210
+    benchmark:
+      net_margin: 0.13
+      monthly_growth: 0.026
+      churn: 0.04
+      cac: 95
+      ltv_cac: 3.2
+      marketing_ratio: 0.09
+  logistics:
+    label:
+      en: "Logistics & delivery"
+      fr: "Logistique & livraison"
+      ar: "اللوجستيك والتوصيل"
+    market_size: 7.9
+    growth: 6.3
+    competition: 7.4
+    capital_intensity: 7.0
+    gross_margin: 0.34
+    scalability: 7.3
+    regulatory: 6.2
+    operational: 7.2
+    typical_price: 40
+    typical_customers: 600
+    benchmark:
+      net_margin: 0.07
+      monthly_growth: 0.03
+      churn: 0.035
+      cac: 70
+      ltv_cac: 3.0
+      marketing_ratio: 0.06
+  tourism:
+    label:
+      en: "Tourism & hospitality"
+      fr: "Tourisme & hôtellerie"
+      ar: "السياحة والضيافة"
+    market_size: 7.5
+    growth: 5.8
+    competition: 7.3
+    capital_intensity: 7.4
+    gross_margin: 0.57
+    scalability: 5.6
+    regulatory: 6.0
+    operational: 7.0
+    typical_price: 140
+    typical_customers: 120
+    benchmark:
+      net_margin: 0.11
+      monthly_growth: 0.028
+      churn: 0.06
+      cac: 80
+      ltv_cac: 2.8
+      marketing_ratio: 0.11
+  renewable_energy:
+    label:
+      en: "Renewable energy"
+      fr: "Énergie renouvelable"
+      ar: "الطاقة المتجددة"
+    market_size: 8.0
+    growth: 8.5
+    competition: 5.8
+    capital_intensity: 9.0
+    gross_margin: 0.48
+    scalability: 7.6
+    regulatory: 7.4
+    operational: 7.8
+    typical_price: 850
+    typical_customers: 18
+    benchmark:
+      net_margin: 0.12
+      monthly_growth: 0.045
+      churn: 0.02
+      cac: 350
+      ltv_cac: 3.5
+      marketing_ratio: 0.08
+  creative_services:
+    label:
+      en: "Creative & professional services"
+      fr: "Services créatifs & professionnels"
+      ar: "الخدمات الإبداعية والمهنية"
+    market_size: 6.8
+    growth: 5.1
+    competition: 7.1
+    capital_intensity: 2.4
+    gross_margin: 0.69
+    scalability: 5.4
+    regulatory: 3.4
+    operational: 4.2
+    typical_price: 220
+    typical_customers: 35
+    benchmark:
+      net_margin: 0.17
+      monthly_growth: 0.025
+      churn: 0.07
+      cac: 120
+      ltv_cac: 3.0
+      marketing_ratio: 0.08
+  manufacturing:
+    label:
+      en: "Manufacturing & crafts"
+      fr: "Industrie & artisanat"
+      ar: "الصناعة والحرف"
+    market_size: 7.2
+    growth: 4.1
+    competition: 6.4
+    capital_intensity: 8.6
+    gross_margin: 0.31
+    scalability: 6.6
+    regulatory: 6.5
+    operational: 7.6
+    typical_price: 180
+    typical_customers: 80
+    benchmark:
+      net_margin: 0.08
+      monthly_growth: 0.018
+      churn: 0.025
+      cac: 150
+      ltv_cac: 3.0
+      marketing_ratio: 0.05
+  agriculture:
+    label:
+      en: "Agriculture & agri-food"
+      fr: "Agriculture & agroalimentaire"
+      ar: "الفلاحة والصناعات الغذائية"
+    market_size: 7.0
+    growth: 4.5
+    competition: 6.1
+    capital_intensity: 7.6
+    gross_margin: 0.36
+    scalability: 5.8
+    regulatory: 6.6
+    operational: 7.9
+    typical_price: 65
+    typical_customers: 150
+    benchmark:
+      net_margin: 0.07
+      monthly_growth: 0.02
+      churn: 0.03
+      cac: 60
+      ltv_cac: 3.0
+      marketing_ratio: 0.05
+  real_estate:
+    label:
+      en: "Real estate & proptech"
+      fr: "Immobilier & proptech"
+      ar: "العقارات والتكنولوجيا العقارية"
+    market_size: 7.8
+    growth: 4.8
+    competition: 6.8
+    capital_intensity: 9.2
+    gross_margin: 0.52
+    scalability: 6.5
+    regulatory: 7.8
+    operational: 7.2
+    typical_price: 900
+    typical_customers: 14
+    benchmark:
+      net_margin: 0.15
+      monthly_growth: 0.022
+      churn: 0.025
+      cac: 320
+      ltv_cac: 3.4
+      marketing_ratio: 0.08
+  fitness_wellness:
+    label:
+      en: "Fitness & lifestyle"
+      fr: "Sport & bien-être"
+      ar: "اللياقة وأسلوب الحياة"
+    market_size: 6.9
+    growth: 6.4
+    competition: 7.5
+    capital_intensity: 6.4
+    gross_margin: 0.60
+    scalability: 5.7
+    regulatory: 4.2
+    operational: 6.4
+    typical_price: 45
+    typical_customers: 260
+    benchmark:
+      net_margin: 0.10
+      monthly_growth: 0.03
+      churn: 0.075
+      cac: 48
+      ltv_cac: 2.8
+      marketing_ratio: 0.10
+  other:
+    label:
+      en: "Other / general business"
+      fr: "Autre / activité générale"
+      ar: "أعمال أخرى / عامة"
+    market_size: 6.5
+    growth: 4.8
+    competition: 6.8
+    capital_intensity: 5.5
+    gross_margin: 0.50
+    scalability: 5.5
+    regulatory: 5.0
+    operational: 5.8
+    typical_price: 80
+    typical_customers: 150
+    benchmark:
+      net_margin: 0.10
+      monthly_growth: 0.02
+      churn: 0.045
+      cac: 90
+      ltv_cac: 3.0
+      marketing_ratio: 0.09

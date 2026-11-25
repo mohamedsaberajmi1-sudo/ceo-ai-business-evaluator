@@ -1,0 +1,38 @@
+# Single source of truth for the bot identity.
+# This value is reused in the Streamlit UI, chat avatar, PDF header and README.
+bot_name: "CEO AI"
+
+default_language: "en"
+supported_languages:
+  en: "English"
+  fr: "Français"
+  ar: "Tunisian Arabic / العربية"
+
+paths:
+  data: "data"
+  models: "models"
+  evaluations_db: "data/evaluations.db"
+  markets_config: "configs/markets.yaml"
+
+ui:
+  layout: "wide"
+  page_icon: "🧠"
+  show_llm_status: true
+  max_compare_ideas: 3
+
+llm:
+  # none | ollama | openai | anthropic. Environment variables override this.
+  provider: "none"
+  model: ""
+  temperature: 0.2
+  timeout_seconds: 20
+
+scoring:
+  # Blend between the ML success probability and the transparent rubric.
+  ml_weight: 0.55
+  verdict_thresholds:
+    succeed: 68
+    risky: 45
+  confidence:
+    min: 35
+    max: 96

@@ -1,0 +1,49 @@
+feature,display,mean_abs_shap
+differentiation,differentiation,0.4272050936668717
+competitor_intensity,competitor intensity,0.33520236721975033
+audience_fit,audience fit,0.32272268549212957
+market_growth_score,market growth score,0.28254550881100243
+timing_score,timing score,0.2775442978360144
+market_size_score,market size score,0.2546346549534594
+regulatory_risk,regulatory risk,0.19419721402261375
+team_readiness,team readiness,0.182266741015992
+operational_complexity,operational complexity,0.18126895078381794
+revenue_model,revenue_model: one_time,0.13178825055237475
+marketing_spend,marketing spend,0.11879703028236524
+revenue_model,revenue_model: subscription,0.07685429257015208
+founder_experience_years,founder experience years,0.0720040287484743
+target_market,target_market: b2b,0.05969740152762395
+funding_stage,funding_stage: seed,0.04367857986250395
+revenue_model,revenue_model: hybrid,0.04309019796157329
+country_preset,country_preset: tunisia,0.039062609024125325
+country_preset,country_preset: generic,0.030884880435617695
+expected_customers,expected customers,0.025399586377533406
+team_size,team size,0.02452530093383357
+city_tier,city tier,0.023205029905923026
+target_market,target_market: b2c,0.022168873374726276
+target_market,target_market: b2b2c,0.019557040729354734
+sector,sector: renewable_energy,0.017028278751256214
+sector,sector: fintech,0.01625042744453446
+sector,sector: saas,0.015013437810493779
+funding_stage,funding_stage: bootstrapped,0.012858404910233706
+sector,sector: ecommerce,0.012039753815407348
+sector,sector: agriculture,0.011132371558307297
+revenue_model,revenue_model: freemium,0.010750936848158425
+revenue_model,revenue_model: commission,0.010599611524551382
+sector,sector: creative_services,0.010484445086798595
+sector,sector: manufacturing,0.009154915436752342
+revenue_model,revenue_model: advertising,0.007759623252819504
+sector,sector: healthcare,0.006855846541735383
+sector,sector: retail,0.006093515981098754
+budget,budget,0.005017349352162843
+price,price,0.003471889893460426
+sector,sector: real_estate,0.0031849785819142544
+sector,sector: food_beverage,0.0031449452243983754
+sector,sector: logistics,0.00273720729521481
+sector,sector: education,0.0027284935761792816
+target_market,target_market: marketplace,0.001863830919135384
+funding_stage,funding_stage: friends_family,0.0018358181731265265
+sector,sector: fitness_wellness,0.0011849780701379139
+sector,sector: tourism,0.0009667114190363958
+funding_stage,funding_stage: series_a,0.000853312432154658
+sector,sector: other,0.0006572598387855738
